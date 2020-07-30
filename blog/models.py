@@ -10,7 +10,7 @@ from django.db import models
 
 class Post(models.Model):
     title = models.CharField(max_length=250)
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    # author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
     content = models.TextField(max_length=1000)
     url = models.URLField(blank=True, null=True, help_text="www.website.com")
     date_added = models.DateTimeField(auto_now_add=True)
