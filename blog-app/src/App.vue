@@ -6,6 +6,7 @@
           <router-link to="/index">Blog Time!</router-link>
         </h2>
         <router-link to='/create' class="btn btn-sm btn-primary">Create post</router-link>
+        <router-view />
       </div>  
     </div>
   </div>
