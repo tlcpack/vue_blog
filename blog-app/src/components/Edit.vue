@@ -1,6 +1,6 @@
 <template>
     <div class="pt-5">
-    <form @submit.prevent="create" method="post">
+    <form @submit.prevent="update" method="post">
       <div class="form-group">
         <label for="title">Title</label>
         <input

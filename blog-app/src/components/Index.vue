@@ -53,6 +53,7 @@ export default {
         axios
           .delete(`http://127.0.0.1:8000/api/posts/${post.id}`)
           .then((response) => {
+            console.log(response);
             this.all();
           });
       }
