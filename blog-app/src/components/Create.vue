@@ -19,10 +19,12 @@
           class="form-control"
           id="content"
           v-model="post.content"
+          @keyup="charCount()"
           name="content"
           placeholder="Write something interesting!"
         />
       </div>
+      <div>{{ totalcharacter }} characters used</div>
       <div class="form-group">
         <label for="url">Associated link?</label>
         <input
@@ -62,6 +64,9 @@ export default {
                 this.$router.push("/");
             });
         },
+        charCount: function () {
+          this.totalcharacter = this.post.content.length + 1;
+        }
     },
 };
 </script>
