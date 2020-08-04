@@ -15,7 +15,7 @@
             >
               <title>{{ post.title }}</title>
               <rect width="100%" height="100%" fill="#55595c" />
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title.charAt(0) }}</text>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.id }}</text>
             </svg>
           </div>
           <div class="col-md-8">
