@@ -36,7 +36,7 @@
           placeholder="Enter website here"
         />
       </div>
-      <button type="submit" class="btn btn-primary">Post!</button>
+      <b-button type="submit" class="btn btn-primary" v-b-tooltip.hover.bottom title="This is final">Post!</b-button>
     </form>
   </div>
 </template>
