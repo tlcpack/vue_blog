@@ -32,4 +32,4 @@ class Season(models.Model):
     run_diff = models.IntegerField()
 
     def __str__(self):
-        return self.year
+        return str(self.year)
