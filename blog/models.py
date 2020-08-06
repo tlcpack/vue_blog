@@ -22,3 +22,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
+class Season(models.Model):
+    year = models.IntegerField()
+    wins = models.IntegerField()
+    losses = models.IntegerField()
+    era_plus = models.FloatField()
+    bat_ave = models.FloatField()
+    ops = models.FloatField()
+    run_diff = models.IntegerField()
+
+    def __str__(self):
+        return self.year
