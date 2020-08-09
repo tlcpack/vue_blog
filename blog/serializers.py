@@ -8,6 +8,6 @@ class PostSerializer(serializers.ModelSerializer):
 
 class SeasonSerializer(serializers.ModelSerializer):
     class Meta:
-        model: Season
+        model = Season
         fields = '__all__'
         
