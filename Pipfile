@@ -12,6 +12,7 @@ django-cors-headers = "*"
 sportsreference = "*"
 django-heroku = "*"
 gunicorn = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
