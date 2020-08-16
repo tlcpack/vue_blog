@@ -1,13 +1,13 @@
 <template>
   <div class="p-3">
-    <div class="card" v-for="season of seasons" v-bind:key="season.year">
+    <div class="card" v-for="season of seasons" v-bind:key="season.id">
       <div class="col-md-4">
         <h3 class="mt-3">{{ season.year }}</h3>
       </div>
       <div class="card-body">
         <p class="card-text">{{ season.wins }} - {{ season.losses }}</p>
         <router-link
-          :to="{name: 'season', params: { id:season.year }}"
+          :to="{name: 'season', params: { id:season.id }}"
           class="btn btn-sm btn-primary"
         >More details</router-link>
       </div>
