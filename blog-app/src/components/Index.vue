@@ -26,6 +26,10 @@
                 :to="{name: 'edit', params: { id: post.id }}"
                 class="btn btn-sm btn-primary"
               >Edit</router-link>
+              <router-link
+                :to="{name: 'details', params: { id: post.id }}"
+                class="btn btn-sm btn-info ml-1"
+              >Details</router-link>
               <button class="btn btn-danger btn-sm ml-1" v-on:click="deletePost(post)">Delete</button>
             </div>
           </div>

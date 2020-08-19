@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Index from '@/components/Index'
 import Create from '@/components/Create'
 import Edit from '@/components/Edit'
+import Details from '@/components/Details'
 import Seasons from '@/components/Seasons'
 import Season from '@/components/Season'
 
@@ -23,6 +24,11 @@ export default new VueRouter({
             path: '/edit/:id',
             name: 'edit',
             component: Edit
+        },
+        {
+            path: '/details/:id',
+            name: 'details',
+            component: Details
         },
         {
             path: '/index',
