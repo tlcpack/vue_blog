@@ -1,18 +1,9 @@
 <template>
-  <div class="pt-5">
-    <div>
-      <label for="title">Title</label>
-      <div>{{ post.title }}</div>
-    </div>
-    <div>
-      <label for="content">Your thoughts:</label>
-      <div>{{ post.content }}</div>
-    </div>
-    <div>
-      <label for="url">Associated link?</label>
-      <div>{{ post.url }}</div>
-    </div>
-  </div>
+  <b-card-body>
+    <b-card-title>{{post.title}}</b-card-title>
+    <b-card-text>{{post.content}}</b-card-text>
+    <b-button :href="url" variant="primary">Link</b-button>
+  </b-card-body>
 </template>
 
 <script>
