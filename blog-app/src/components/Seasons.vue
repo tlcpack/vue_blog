@@ -1,6 +1,6 @@
 <template>
   <div class="p-3">
-    <div class="card" v-for="season of seasons" v-bind:key="season.id">
+    <div class="card my-3 rounded-lg" v-for="season of seasons" v-bind:key="season.id">
       <div class="col-md-4">
         <h3 class="mt-3">{{ season.year }}</h3>
       </div>
