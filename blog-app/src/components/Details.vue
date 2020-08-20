@@ -1,9 +1,9 @@
 <template>
-  <b-card-body>
-    <b-card-title>{{post.title}}</b-card-title>
-    <b-card-text>{{post.content}}</b-card-text>
-    <b-button :href="url" variant="primary">Link</b-button>
-  </b-card-body>
+  <div class="jumbotron">
+    <div class="display-4">{{post.title}}</div>
+    <p class="lead">{{post.content}}</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div>
 </template>
 
 <script>
