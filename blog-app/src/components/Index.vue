@@ -53,14 +53,12 @@ export default {
   },
   methods: {
     deletePost: function (post) {
-      if (confirm("Delete " + post.title)) {
-        axios
-          .delete(`http://127.0.0.1:8000/api/posts/${post.id}`)
-          .then((response) => {
-            console.log(response);
-            this.all();
-          });
-      }
+      axios
+        .delete(`http://127.0.0.1:8000/api/posts/${post.id}`)
+        .then((response) => {
+          console.log(response);
+          this.all();
+        });
     },
     all: function () {
       axios.get("http://127.0.0.1:8000/api/posts/").then((response) => {

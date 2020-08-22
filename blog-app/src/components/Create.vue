@@ -2,7 +2,7 @@
   <div class="pt-5">
     <form @submit.prevent="create" method="post">
       <div class="form-group">
-        <label for="title">Title</label>
+        <h3 for="title" class="py-3">{{post.title}}</h3>
         <input
           type="text"
           class="form-control"
@@ -12,7 +12,7 @@
           placeholder="Blog Title"
         />
       </div>
-      <div class="form-group">
+      <div class="form-group my-5">
         <label for="content">Your thoughts:</label>
         <input
           type="text"
@@ -24,7 +24,7 @@
           placeholder="Write something interesting!"
         />
       </div>
-      <div>{{ totalcharacter }} characters used</div>
+      <div class="m-3">{{ totalcharacter }} characters used</div>
       <div class="form-group">
         <label for="url">Associated link?</label>
         <input
