@@ -3,6 +3,7 @@
     <div class="display-4">{{post.title}}</div>
     <p class="lead">{{post.content}}</p>
     <a class="btn btn-primary btn-lg" :href="`${post.url}`" target="_blank" role="button">Learn more</a>
+    <router-link :to="`/details/${post.id}/comment`" class="m-3 btn btn-sm btn-primary">Comment</router-link>
   </div>
 </template>
 

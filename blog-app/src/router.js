@@ -6,6 +6,7 @@ import Edit from '@/components/Edit'
 import Details from '@/components/Details'
 import Seasons from '@/components/Seasons'
 import Season from '@/components/Season'
+import Comment from '@/components/Comment'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,11 @@ export default new VueRouter({
             path: '/details/:id',
             name: 'details',
             component: Details
+        },
+        {
+            path: 'details/:id/comment',
+            name: 'comment',
+            component: Comment
         },
         {
             path: '/index',
