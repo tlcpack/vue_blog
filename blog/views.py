@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Post, Season
-from .serializers import PostSerializer, SeasonSerializer
+from .models import Post, Season, Comment
+from .serializers import PostSerializer, SeasonSerializer, CommentSerializer
 from rest_framework import generics
 
 # Create your views here.
@@ -19,3 +19,7 @@ class SeasonList(generics.ListCreateAPIView):
 class SeasonDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Season.objects.all()
     serializer_class = SeasonSerializer
+
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
