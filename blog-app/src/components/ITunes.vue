@@ -1,0 +1,74 @@
+<template>
+  <v-container>
+    <v-flex>
+      <h5 class="headline text-xs-center grey-text text--lighten-3 mb-4 mt-2">iTunes Search</h5>
+      <v-card>
+        <v-card-text class="pb-0">
+          <v-form @submit.prevent="submitSearch(true)">
+            <v-layout row>
+              <v-flex xs11>
+                <v-text-field
+                  v-model="search"
+                  class="mt-0"
+                  color="white"
+                  dark
+                  clearable
+                  :label="label"
+                ></v-text-field>
+              </v-flex>
+              <v-flex x1 class="mt-0">
+                <v-btn outline color="white" type="submit">
+                  <v-icon>search</v-icon>
+                </v-btn>
+              </v-flex>
+            </v-layout>
+          </v-form>
+          <v-flex xs12>
+            <v-radio-group v-model="entity" row dark>
+              <v-radio label="Album" value="album"></v-radio>
+              <v-radio label="Music Track" value="musicTrack"></v-radio>
+            </v-radio-group>
+          </v-flex>
+        </v-card-text>
+
+        <v-card-text v-if="albums.length">
+          <v-layout row>
+            <v-flex xs12 class="text-xs-center">
+              <v-btn fab outline color="white" small @click="submitSearch()">
+                <v-icon>chevron_left</v-icon>
+              </v-btn>
+              <span class="title white--text mx-4">{{ page }}</span>
+              <v-btn fab outline color="white" small @click="submitSearch(true)">
+                <v-icon>chevron_right</v-icon>
+              </v-btn>
+            </v-flex>
+          </v-layout>
+          <v-layout row wrap justify-center>
+            <div
+              class="text-xs-center my-1 mx-3 album-card"
+              v-for="(album, index) in albums"
+              :key="index"
+            >
+              <v-avatar
+                :tile="true"
+                size="160"
+                class="elevation-4 album-box mt-3"
+                @click="toiTunesAlbum(album)"
+              >
+                <img :src="resizeArtworkUrl(album)" alt="Album Cover" class="album-cover">
+                <v-icon class="play-btn" color="white">play_circle_filled</v-icon>
+              </v-avatar>
+              <v-flex class="text-xs-left mt-2 album-info" xs12>
+                <div v-if="album.wrapperType === 'track'" class="subheading font-weight-medium white--text">{{ album.trackName }}</div>
+                <div class="subheading font-weight-medium text--lighten-2 grey--text">{{ album.collectionName }}</div>
+                <div class="text--lighten-2 grey--text">{{ album.artistName}}</div>
+                <div class="text--lighten-2 grey--text">{{ getReleaseYear(album) }}</div>
+                <div class="grey--text">{{ album.primaryGenreName}}</div>
+              </v-flex>
+            </div>
+          </v-layout>
+        </v-card-text>
+      </v-card>
+    </v-flex>
+  </v-container>
+</template>
