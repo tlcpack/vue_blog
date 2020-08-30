@@ -74,8 +74,35 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-    
+    data() {
+        return {
+            albums: [],
+            entity: 'album',
+            label: 'Enter Artist Name',
+            page: 0,
+            search: ''
+        }
+    },
+
+    watch : {
+        search: function (val) {
+            if (!val) {
+                this.albums = [],
+                this.page = 0
+            }
+        },
+
+        entity: function () {
+            this.search = ''
+            this.label = this.entity === 'album' ? 'Enter Artist Name' : 'Enter Music Track'
+        },
+    },
+
+    methods: {
+        
+    }
 }
 </script>
 
