@@ -101,7 +101,15 @@ export default {
     },
 
     methods: {
-        
+        getReleaseYear (album) {
+            return album.releaseDate.substr(0,4)
+        },
+        resizeArtworkUrl (album) {
+            return album.artworkUrl100.replace("100x100", "160x160")
+        },
+        submitSearch (increase) {
+            
+        }
     }
 }
 </script>
