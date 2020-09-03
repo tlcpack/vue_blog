@@ -53,13 +53,13 @@ export default {
         };
     },
     mounted() {
-        axios.get("nameless-spire-79883.herokuapp.com/api/posts/" + this.$route.params.id).then((response) => {
+        axios.get("http://nameless-spire-79883.herokuapp.com/api/posts/" + this.$route.params.id).then((response) => {
             this.post = response.data;
         });
     },
     methods: {
         update: function () {
-            axios.put(`nameless-spire-79883.herokuapp.com/api/posts/${this.post.id}/`,
+            axios.put(`http://nameless-spire-79883.herokuapp.com/api/posts/${this.post.id}/`,
             this.post
             )
             .then((response) => {
