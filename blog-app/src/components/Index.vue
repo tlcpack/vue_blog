@@ -54,14 +54,14 @@ export default {
   methods: {
     deletePost: function (post) {
       axios
-        .delete(`http://127.0.0.1:8000/api/posts/${post.id}`)
+        .delete(`http://nameless-spire-79883.herokuapp.com/api/posts/${post.id}`)
         .then((response) => {
           console.log(response);
           this.all();
         });
     },
     all: function () {
-      axios.get("http://127.0.0.1:8000/api/posts/").then((response) => {
+      axios.get("http://nameless-spire-79883.herokuapp.com/api/posts/").then((response) => {
         this.posts = response.data;
       });
     },
