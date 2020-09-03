@@ -53,13 +53,13 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://127.0.0.1:8000/api/posts/" + this.$route.params.id).then((response) => {
+        axios.get("nameless-spire-79883.herokuapp.com/api/posts/" + this.$route.params.id).then((response) => {
             this.post = response.data;
         });
     },
     methods: {
         update: function () {
-            axios.put(`http://127.0.0.1:8000/api/posts/${this.post.id}/`,
+            axios.put(`nameless-spire-79883.herokuapp.com/api/posts/${this.post.id}/`,
             this.post
             )
             .then((response) => {
